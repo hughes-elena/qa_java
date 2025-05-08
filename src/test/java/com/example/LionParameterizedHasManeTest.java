@@ -34,8 +34,8 @@ public class LionParameterizedHasManeTest {
     // Тест, что метод boolean doesHaveMane выдает true если он Male
     @Test
     public void doesHaveManeShouldReturnTrue() throws Exception {
-        Predator predator = Mockito.mock(Predator.class);
-        Lion lion = new Lion(sex, predator);
+        Feline feline = Mockito.mock(Feline.class);
+        Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
 

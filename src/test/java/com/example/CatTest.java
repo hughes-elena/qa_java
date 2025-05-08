@@ -14,26 +14,27 @@ import static org.junit.Assert.*;
 public class CatTest {
 
     @Mock
-    Predator predator; // создаём мок объекта Predator (интерфейс)
+    Feline feline; // создаём мок объекта Feline
 
     Cat cat;
 
     @Before
     public void setUp() {
-        cat = new Cat(predator); // передаём мок в Cat
+        cat = new Cat(feline); // передаём мок в Cat
     }
 
     @Test
     public void getSoundTest() {
+
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
     public void getFoodTest() throws Exception {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
-        Mockito.when(predator.eatMeat()).thenReturn(expected);
+        Mockito.when(feline.eatMeat()).thenReturn(expected);
 
         assertEquals(expected, cat.getFood());
-        Mockito.verify(predator).eatMeat();
+        Mockito.verify(feline).eatMeat();
     }
 }

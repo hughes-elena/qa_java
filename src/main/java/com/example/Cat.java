@@ -4,14 +4,10 @@ import java.util.List;
 
 public class Cat {
 
-    private Predator predator;
+    Predator predator;
 
-    /* public Cat(Feline feline) {
+    public Cat(Feline feline) {
         this.predator = feline;
-    } */ //Удалили это
-
-    public Cat(Predator predator) {
-        this.predator = predator;
     }
 
     public String getSound() {
