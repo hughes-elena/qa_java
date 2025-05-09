@@ -1,9 +1,8 @@
 package com.example;
 
-import java.util.List;
+import java.util.List;                       // Импортируем класс List из стандартной библиотеки Java, для работы со списками строк List<String>
 
-public interface Predator {
+public interface Predator {                 // Объявляем интерфейс Predator (Хищник), который обязывает все классы-хищники реализовать указанные методы
 
-    List<String> eatMeat() throws Exception;
-
+    List<String> eatMeat() throws Exception;        // Метод, возвращает список, что ест хищник. @return Список строк с названиями пищи (например, ["Мясо", "Рыба"]) @throws Exception Может выбросить исключение, если что-то пошло не так(например, неизвестный вид хищника)
 }
